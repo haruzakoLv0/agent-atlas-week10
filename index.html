@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="從零理解 AI Agent：概念、工具、Workflow、Loop、Graph，以及如何用 LLM Wiki 查詢來源。">
+  <meta name="theme-color" content="#f4f7f6">
+  <title>Agent Atlas｜AI Agent 零基礎互動課</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="wiki-data.js" defer></script><script src="app.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip" href="#main">跳到主要內容</a>
+  <div class="ambient orb-one" aria-hidden="true"></div><div class="ambient orb-two" aria-hidden="true"></div>
+  <header class="site-header"><div class="container nav-inner">
+    <a href="index.html" class="brand" aria-label="Agent Atlas 首頁"><span class="brand-icon">✳</span><span>agent<span class="brand-accent">atlas</span><small>AI LEARNING LAB</small></span></a>
+    <nav class="desktop-nav" aria-label="主要導覽"><a href="#learn">入門課程</a><a href="#experience">互動實驗</a><a href="#flow">Loop / Graph</a><a href="wiki.html">Wiki 資料庫</a></nav>
+    <a class="nav-cta" href="wiki.html">探索知識庫 <span aria-hidden="true">↗</span></a>
+  </div></header>
+  <main id="main">
+    <section class="hero container"><div class="hero-copy">
+      <div class="eyebrow"><span class="alive"></span> WEEK 10 · KNOWLEDGE TO WEBSITE <span class="slash">/</span> 互動教材</div>
+      <h1>搞懂 AI Agent，<br>從<span class="serif-accent">「會回答」</span>到<br><span class="underline-soft">「會做事」。</span></h1>
+      <p class="hero-lead">聊天機器人可以回答問題，但 AI Agent 如何規劃、使用工具、檢查結果？用五份官方資料整理成的 Wiki，帶你一步步弄懂。</p>
+      <div class="hero-actions"><a href="#learn" class="btn btn-primary">開始 5 分鐘入門 <span aria-hidden="true">↗</span></a><a href="#experience" class="btn btn-ghost">先玩互動模擬 <span aria-hidden="true">→</span></a></div>
+      <div class="hero-proof"><span class="proof-dots"><i></i><i></i><i></i></span> 來源透明・可追溯・不用登入</div>
+    </div>
+    <div class="hero-art" aria-label="以卡片呈現 Agent 的思考與工具使用流程">
+      <div class="art-grid"></div><div class="art-sticker s-top">★ THINK → ACT → CHECK</div>
+      <div class="agent-window"><div class="window-head"><div class="window-dots"><b></b><b></b><b></b></div><span>agent_brain.exe</span><span class="window-live">● active</span></div>
+        <div class="brain-orbit"><div class="orbit-ring orbit-1"></div><div class="orbit-ring orbit-2"></div><div class="brain-core">✳</div><span class="orbit-chip chip-1">SEARCH</span><span class="orbit-chip chip-2">REASON</span><span class="orbit-chip chip-3">VERIFY</span></div>
+        <div class="window-bottom"><span><b class="dot-green"></b> 解析任務中</span><span>01 / 03</span></div>
+      </div><div class="floating-note"><span>↗</span><strong>不是魔法，<br>是有邏輯的步驟。</strong></div><div class="art-sticker s-bottom">powered by <b>5 sources</b></div>
+    </div></section>
+    <section class="metrics container" aria-label="知識庫統計"><div><strong data-stat="sources">05</strong><span>官方資料筆記</span></div><div><strong data-stat="chunks">20</strong><span>可檢索知識片段</span></div><div><strong>04</strong><span>核心教學章節</span></div><div><strong>100%</strong><span>可點回來源核對</span></div></section>
+    <section id="learn" class="section container">
+      <div class="section-head"><div><div class="section-kicker">01 / LEARN THE BASICS</div><h2>不用懂程式，<br>也能弄懂 Agent。</h2></div><p>從最常搞混的概念開始，再看組件與流程。每個概念都有對應的 Wiki 來源。</p></div>
+      <div class="comparison"><article class="compare-card"><span class="tag tag-muted">普通聊天機器人</span><div class="compare-emoji">💬</div><h3>你問，它回答。</h3><p>擅長解釋、摘要和單次對話；未必會自己決定下一步該使用哪個工具。</p><div class="mini-prompt">「什麼是 CPU？」<span>→ 回答概念</span></div></article><div class="vs">VS</div><article class="compare-card active-compare"><span class="tag tag-accent">AI Agent</span><div class="compare-emoji">✳</div><h3>你給目標，它安排步驟。</h3><p>可能先讀資料、選擇工具、執行任務，再檢查是否符合目標；必要時修正路線。</p><div class="mini-prompt">「幫我整理一份報告」<span>→ 查資料 → 驗證 → 交付</span></div></article></div>
+      <div class="source-hint">資料依據 <a href="wiki.html#S01">S01 OpenAI</a>、<a href="wiki.html#S02">S02 Anthropic</a> <span>· 注意：不是所有帶有 AI 的產品都算 Agent</span></div>
+      <div class="subsection-title"><h3>四個必懂的 Agent 元件</h3><p>點開卡片看生活化例子</p></div>
+      <div class="component-grid">
+        <button class="component-card" aria-expanded="false"><span class="component-icon purple">🧠</span><b>01 · 模型</b><h4>負責思考</h4><p>理解目標，推理下一步。</p><span class="component-detail" hidden>例如：讀懂「這份報告少了哪一段」，判斷是否需要補資料。</span><span class="component-more">看例子 <span>＋</span></span></button>
+        <button class="component-card" aria-expanded="false"><span class="component-icon orange">🛠️</span><b>02 · 工具</b><h4>負責行動</h4><p>搜尋、讀檔案或執行功能。</p><span class="component-detail" hidden>例如：打開課程文件、整理表格，或查詢 Wiki 的相關片段。</span><span class="component-more">看例子 <span>＋</span></span></button>
+        <button class="component-card" aria-expanded="false"><span class="component-icon blue">📋</span><b>03 · 指令</b><h4>確定任務</h4><p>告訴 AI 目標與限制。</p><span class="component-detail" hidden>例如：限用五份指定來源，以繁體中文寫出初學者也能懂的教學。</span><span class="component-more">看例子 <span>＋</span></span></button>
+        <button class="component-card" aria-expanded="false"><span class="component-icon green">🛡️</span><b>04 · 護欄</b><h4>避免出錯</h4><p>設定檢查、權限與停止條件。</p><span class="component-detail" hidden>例如：找不到來源就標示「待查證」，不得自行編造出處。</span><span class="component-more">看例子 <span>＋</span></span></button>
+      </div>
+      <div class="callout"><div class="callout-icon">🍚</div><div><strong>延伸：我們之前做的「我要吃飯飯巴布」算 Agent 嗎？</strong><p>它依照預設規則計算晚餐推薦，屬於<strong>規則式推薦 Workflow</strong>；不是因為介面可愛、會提供推薦，就自動變成 AI Agent。</p></div><a href="wiki.html#S02" aria-label="前往 S02 Wiki 來源">↗</a></div>
+    </section>
+    <section id="experience" class="section section-tint"><div class="container">
+      <div class="section-head"><div><div class="section-kicker">02 / TRY IT YOURSELF</div><h2>看見一個任務，<br>如何一步步完成。</h2></div><p>選擇案例，按「下一步」模擬工作流程。這是預先設計的教學模擬，不會真的呼叫 LLM 或外部工具。</p></div>
+      <div class="simulator"><div class="sim-left"><div class="sim-panel-title">CHOOSE A TASK <span>STEP 01</span></div>
+        <div class="scenario-options"><button class="scenario active" data-scenario="report" aria-pressed="true"><span>📚</span><div><b>整理課程報告</b><small>查資料、檢查來源、輸出結果</small></div><span>↗</span></button><button class="scenario" data-scenario="dinner" aria-pressed="false"><span>🍜</span><div><b>晚餐推薦器</b><small>辨認固定規則 Workflow</small></div><span>↗</span></button><button class="scenario" data-scenario="missing" aria-pressed="false"><span>🔎</span><div><b>來源不足的教學</b><small>理解檢查失敗與修正 loop</small></div><span>↗</span></button></div>
+        <div class="sim-caption">小提示：流程中看到「失敗」不是壞事，重點是要知道<span>退回哪一步</span>。</div></div>
+        <div class="sim-right"><div class="sim-terminal-top"><span class="terminal-dots">● ● ●</span><span>WORKFLOW SIMULATOR</span><span id="step-counter">01 / 05</span></div><div class="sim-stage"><div class="sim-step-label" id="sim-step-label">STEP 01 · RECEIVE</div><div class="sim-icon" id="sim-icon">🎯</div><h3 id="sim-title">接收使用者目標</h3><p id="sim-description">使用者希望把課堂的 AI Agent 資料整理成教學內容。</p><div class="sim-trace" id="sim-trace">目前狀態：已取得任務目標。</div></div><div class="sim-bottom"><div class="sim-progress" id="sim-progress"><i class="on"></i><i></i><i></i><i></i><i></i></div><div class="sim-controls"><button id="sim-reset" class="btn btn-small btn-light">↺ 重來</button><button id="sim-next" class="btn btn-small btn-primary">下一步 →</button></div></div></div></div>
+    </div></section>
+    <section id="wiki-preview" class="section container"><div class="section-head"><div><div class="section-kicker">03 / OPEN THE KNOWLEDGE BASE</div><h2>不是憑空回答，<br>每個重點都找得到出處。</h2></div><p>以下搜尋真正使用本專案 ingest 後的 Wiki 索引。輸入關鍵字，直接查看命中的來源與章節。</p></div>
+      <div class="search-demo"><div class="search-demo-head"><span>✳ WIKI SEARCH</span><span id="wiki-result-count">20 個片段可檢索</span></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="quick-search" type="search" placeholder="試試搜尋：Agent、Workflow、工具、Loop、RAG…" aria-label="搜尋 Wiki 知識片段" autocomplete="off"><kbd>⌕</kbd></label><div class="suggestions"><span>熱門搜尋</span><button data-query="Agent">Agent</button><button data-query="Workflow">Workflow</button><button data-query="Loop">Loop</button><button data-query="RAG">RAG</button></div><div id="quick-results" class="quick-results" aria-live="polite"></div><div class="search-footer"><span>資料來自 5 份官方來源的中文筆記</span><a href="wiki.html">開啟完整 Wiki →</a></div></div>
+    </section>
+    <section id="flow" class="section section-dark"><div class="container"><div class="section-head light"><div><div class="section-kicker">04 / DESIGN THE LOOP</div><h2>不是做完就好，<br>要懂得回頭檢查。</h2></div><p>這次網站的內容設計使用明確的檢查節點。資料不夠就回去補、說法有誤就重寫，通過後才組成 HTML。</p></div>
+      <div class="flow-showcase"><div class="flow-figure"><img src="flow.svg" alt="流程圖：蒐集來源、Wiki 匯入與索引、查詢、組織重點、品質檢查；不通過則返回查詢，通過後生成 HTML、測試網頁；測試未過則返回修正。超過兩次重試則人工檢查。" loading="lazy"></div><div class="flow-explain"><div class="process-item"><span>01</span><div><h3>資料進來之前先規劃</h3><p>固定五份來源，保留名稱、連結與日期；每份筆記分成摘要、重點、例子與誤解。</p></div></div><div class="process-item"><span>02</span><div><h3>查詢後才生成內容</h3><p>先找相關的 Wiki 片段；沒有來源的說法不直接寫進教學網頁。</p></div></div><div class="process-item"><span>03</span><div><h3>不通過就回圈修正</h3><p>遇到概念混淆、缺來源或介面異常，回到對應步驟；最多重試兩次，仍失敗就人工檢查。</p></div></div><a href="flow.svg" target="_blank" rel="noopener" class="btn btn-outline-white">放大查看流程圖 ↗</a></div></div>
+    </div></section>
+    <section id="quiz" class="section container"><div class="section-head"><div><div class="section-kicker">05 / KNOWLEDGE CHECK</div><h2>最後三題，<br>確認你真的理解了。</h2></div><p>答題後會顯示分數、正確觀念與對應 Wiki。答錯也能重新練習。</p></div><div class="quiz-layout"><div class="quiz-card"><div class="quiz-status"><span>QUICK QUIZ</span><span id="quiz-count">1 / 3</span></div><div class="quiz-bar"><i id="quiz-bar"></i></div><h3 id="quiz-question">準備開始</h3><div class="quiz-options" id="quiz-options"></div><div id="quiz-feedback" class="quiz-feedback" aria-live="polite"></div><div class="quiz-actions"><button id="quiz-retry" class="btn btn-light" hidden>重新作答 ↺</button><button id="quiz-next" class="btn btn-primary" disabled>下一題 →</button></div></div><aside class="quiz-aside"><div class="aside-spark">✳</div><span>YOUR LEARNING PATH</span><h3>邊學邊驗證，<br>才是真的懂。</h3><p>完成小測驗之後，也可以打開 Wiki 回看五份來源，比較每個說法是從哪裡整理出來的。</p><a href="wiki.html">探索所有知識條目 →</a></aside></div>
+    </section>
+    <section class="bottom-cta container"><div><span>THAT'S THE WHOLE IDEA.</span><h2>從五份知識，<br>長出一堂互動課。</h2><p>想知道每份資料如何匯入、整理及核對？完整的 Wiki 和流程都在這裡。</p></div><a href="wiki.html" class="btn btn-primary">查看 Wiki 索引及來源 ↗</a></section>
+  </main><footer class="footer"><div class="container footer-inner"><div><b>✳ agentatlas</b><p>第十週作業｜LLM Wiki × 教學 HTML</p><small>這是學習展示。互動模擬及檢索在本機執行，不會連線呼叫 LLM API。</small></div><div><a href="#learn">課程</a><a href="#flow">流程圖</a><a href="wiki.html">Wiki</a><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" target="_blank" rel="noopener noreferrer">來源 ↗</a></div></div></footer>
+</body></html>
